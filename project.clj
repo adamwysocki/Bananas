@@ -6,7 +6,7 @@
                  [compojure "1.3.1"]
                  [ring/ring-defaults "0.1.2"]
                  [ring/ring-json "0.3.1"]
-                 [reagent "0.5.0-alpha"]
+                 [reagent "0.5.0-alpha3"]
                  [hiccup "1.0.5"]
                  [garden "1.2.5"]
                  [prone "0.8.0"]
@@ -20,10 +20,9 @@
    [{:id "dev"
      :source-paths ["src/cljs"]
      :compiler
-     {:optimizations :none
-      :output-to "resources/public/js/app.js"
-      :output-dir "resources/public/js/out"}}]}
+      { :optimizations :none
+        :output-to "resources/public/js/app.js"
+        :output-dir "resources/public/js/out"}}]}
   :profiles
   {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]
-                        [ring-mock "0.1.5"]]}
-         :ring {:stacktrace-middleware prone.middleware/wrap-exceptions}})
+                        [ring-mock "0.1.5"]]}})
